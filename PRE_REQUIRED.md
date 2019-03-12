@@ -9,7 +9,7 @@ ansible-client
 
 sudo yum install python36 –y
 
-
+ssh-keygen -t rsa
 
 setenforce 0
 sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
@@ -34,3 +34,6 @@ firewall-cmd --reload
 btw, SELinux is working fine, i did not had to do any adjustments or disable it
 
 https://github.com/kubernetes-sigs/kubespray/issues/2767
+
+
+declare -a IPS=(192.168.1.13 192.168.1.17 192.168.1.25 192.168.1.26 )
