@@ -37,3 +37,5 @@ https://github.com/kubernetes-sigs/kubespray/issues/2767
 
 
 declare -a IPS=(192.168.1.13 192.168.1.17 192.168.1.25 192.168.1.26 )
+CONFIG_FILE=inventory/mycluster/hosts.ini python36 contrib/inventory_builder/inventory.py ${IPS[@]}
+
