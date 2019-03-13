@@ -240,7 +240,7 @@ addon_resizer_version: "1.8.3"
 addon_resizer_image_repo: "k8s.registry.cn-hangzhou.aliyuncs.com/addon-resizer"
 addon_resizer_image_tag: "{{ addon_resizer_version }}"
 
-dashboard_image_repo: "registry.cn-hangzhou.aliyuncs.com/google_containers/kubernetes-dashboard-{{ image_arch }}"
+dashboard_image_repo: "registry.cn-hangzhou.aliyuncs.com/esencloud/kubernetes-dashboard-{{ image_arch }}"
 dashboard_image_tag: "v1.10.1"
 
 downloads:
