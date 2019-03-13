@@ -11,6 +11,9 @@ sudo yum install python36 –y
 
 ssh-keygen -t rsa
 
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.4.208
+
+
 setenforce 0
 sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 
