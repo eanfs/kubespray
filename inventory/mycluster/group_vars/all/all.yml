@@ -72,7 +72,7 @@ bin_dir: /usr/local/bin
 #ignore_assert_errors: false
 
 ## The read-only port for the Kubelet to serve on with no authentication/authorization. Uncomment to enable.
-#kube_read_only_port: 10255
+kube_read_only_port: 10255
 
 ## Set true to download and cache container
 #download_container: true
