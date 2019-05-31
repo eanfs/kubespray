@@ -40,7 +40,7 @@ kubeadm_version: "{{ kube_version }}"
 etcd_version: v3.2.24
 
 # kubernetes image repo define
-kube_image_repo: "gcr.io/google-containers"
+kube_image_repo: "registry.cn-hangzhou.aliyuncs.com/esencloud"
 
 # TODO(mattymo): Move calico versions to roles/network_plugins/calico/defaults
 # after migration to container download
