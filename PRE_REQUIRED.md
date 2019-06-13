@@ -11,7 +11,7 @@ sudo yum install python36 –y
 
 ssh-keygen -t rsa
 
-ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.4.208
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.25
 
 
 setenforce 0
