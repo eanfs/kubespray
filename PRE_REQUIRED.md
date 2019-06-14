@@ -11,7 +11,7 @@ sudo yum install python36 –y
 
 ssh-keygen -t rsa
 
-ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.25
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.4.208
 
 
 setenforce 0
@@ -64,8 +64,11 @@ cat inventory/mycluster/group_vars/k8s-cluster/k8s-cluster.yml
 ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cluster.yml
 
 
-ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cluster.yml
+ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root remove-node.yml \
+  --extra-vars "node=node3"
 
+
+ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cluster.yml --limit node3
 
 sudo yum remove docker-ce
 sudo rm -rf /var/lib/docker
