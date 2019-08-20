@@ -65,7 +65,7 @@ ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cl
 
 
 ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root remove-node.yml \
-  --extra-vars "node=node3"
+  --extra-vars "node=node5"
 
 
 ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cluster.yml --limit node3
