@@ -65,10 +65,10 @@ ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cl
 
 
 ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root remove-node.yml \
-  --extra-vars "node=node9"
+  --extra-vars "node=node7"
 
 
-ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cluster.yml --limit node9
+ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cluster.yml --limit node
 
 sudo yum remove docker-ce
 sudo rm -rf /var/lib/docker
