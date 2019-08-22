@@ -2,8 +2,8 @@
 - name: file_download | Downloading...
   debug:
     msg:
-      - "URL: {{download.url}}"
-      - "Dest: {{download.dest}}"
+      - "URL: {{ download.url }}"
+      - "Dest: {{ download.dest }}"
 
 - name: file_download | Create dest directory
   file:
