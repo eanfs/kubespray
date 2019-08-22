@@ -50,7 +50,7 @@ bin_dir: /usr/local/bin
 kubeadm_enabled: true
 
 # Skip alert information
-skip_non_kubeadm_warning: false
+skip_non_kubeadm_warning: true
 
 ## Set these proxy values in order to update package manager and docker daemon to use proxies
 #http_proxy: ""
