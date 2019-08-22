@@ -206,7 +206,7 @@ spec:
     spec:
       containers:
       - name: kube-registry-proxy
-        image: registry.cn-hangzhou.aliyuncs.com/google_containers/kube-registry-proxy:0.4
+        image: gcr.azk8s.cn/google_containers/kube-registry-proxy:0.4
         resources:
           limits:
             cpu: 100m
