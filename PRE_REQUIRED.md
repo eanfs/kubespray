@@ -78,3 +78,40 @@ sudo rm -rf /var/lib/docker
 
 
 ansible-playbook -i inventory/mycluster/hosts.ini reset.yml
+
+
+## download files
+https://storage.googleapis.com/kubernetes-release/release/v1.12.7/bin/linux/amd64/kubeadm
+https://storage.googleapis.com/kubernetes-release/release/v1.12.7/bin/linux/amd64/hyperkube
+
+https://github.com/containernetworking/plugins/releases/download/v0.6.0/cni-plugins-amd64-v0.6.0.tgz
+
+
+scp kubeadm  root@192.168.1.16:/tmp/releases
+scp kubeadm  root@192.168.1.17:/tmp/releases
+scp kubeadm  root@192.168.1.25:/tmp/releases
+scp kubeadm  root@192.168.1.26:/tmp/releases
+scp kubeadm  root@192.168.1.21:/tmp/releases
+scp kubeadm  root@192.168.1.15:/tmp/releases
+scp kubeadm  root@192.168.1.22:/tmp/releases
+scp kubeadm  root@192.168.1.18:/tmp/releases
+
+
+
+scp hyperkube  root@192.168.1.16:/tmp/releases
+scp hyperkube  root@192.168.1.17:/tmp/releases
+scp hyperkube  root@192.168.1.25:/tmp/releases
+scp hyperkube  root@192.168.1.26:/tmp/releases
+scp hyperkube  root@192.168.1.21:/tmp/releases
+scp hyperkube  root@192.168.1.15:/tmp/releases
+scp hyperkube  root@192.168.1.22:/tmp/releases
+scp hyperkube  root@192.168.1.18:/tmp/releases
+
+scp cni-plugins-amd64-v0.6.0.tgz  root@192.168.1.16:/tmp/releases
+scp cni-plugins-amd64-v0.6.0.tgz  root@192.168.1.17:/tmp/releases
+scp cni-plugins-amd64-v0.6.0.tgz  root@192.168.1.25:/tmp/releases
+scp cni-plugins-amd64-v0.6.0.tgz  root@192.168.1.26:/tmp/releases
+scp cni-plugins-amd64-v0.6.0.tgz  root@192.168.1.21:/tmp/releases
+scp cni-plugins-amd64-v0.6.0.tgz  root@192.168.1.15:/tmp/releases
+scp cni-plugins-amd64-v0.6.0.tgz  root@192.168.1.22:/tmp/releases
+scp cni-plugins-amd64-v0.6.0.tgz  root@192.168.1.18:/tmp/releases
