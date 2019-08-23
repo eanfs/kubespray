@@ -65,7 +65,7 @@ sudo pip install -r requirements.txt
 cp -rfp inventory/sample inventory/mycluster
 
 # Update Ansible inventory file with inventory builder
-declare -a IPS=(192.168.1.16 192.168.1.17 192.168.1.25 192.168.1.26 192.168.1.21 192.168.1.18 192.168.1.22 192.168.1.15)
+declare -a IPS=(192.168.1.16 192.168.1.17 192.168.1.25 192.168.1.26 192.168.1.21 192.168.1.18 192.168.1.22 192.168.1.15 192.168.1.23 192.168.1.24 192.168.1.19 192.168.1.20)
 CONFIG_FILE=inventory/mycluster/hosts.ini python3 contrib/inventory_builder/inventory.py ${IPS[@]}
 
 # Review and change parameters under ``inventory/mycluster/group_vars``
@@ -83,7 +83,7 @@ ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root re
   --extra-vars "node=node7"
 
 
-ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cluster.yml --limit node7
+ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cluster.yml --limit node10 node11 node12
 
 sudo yum remove docker-ce
 sudo rm -rf /var/lib/docker
