@@ -11,14 +11,26 @@ sudo yum install python36 –y
 
 ssh-keygen -t rsa
 
+## 非常重要必须执行
+```
 ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.21
 ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.18
 ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.22
 ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.15
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.19
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.20
+```
 
+```
+systemctl stop firewalld
+systemctl disable firewalld
+```
 
 setenforce 0
 sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+
+
+
 
 Run on master nodes:
 
